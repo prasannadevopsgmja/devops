@@ -1,0 +1,5 @@
+echo "testing" > /var/tmp/testfile
+apt-get install -y nginx
+echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
+systemctl enable nginx
+systemctl start nginx
